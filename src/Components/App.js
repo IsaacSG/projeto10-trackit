@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./Header";
 import Login from "./Login";
 import Cadastro from "./Cadastro";
 import Habitos from "./Habitos";

@@ -1,20 +1,26 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import axios from "axios";
-import { useState } from "react";
-import { createContext } from 'react';
+import { useState, useContext } from "react";
 import Logo from "../Styles/Image/Trackit.png";
 
 export default function Login (){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [body, setBody] = useState([]);
+    const redirecionar = useNavigate()
 
     function Logar(){
         const corpo = {email, password};
         const promisse = axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/auth/login", corpo);
-        promisse.then(resposta => {setBody(resposta.data)});
+        promisse.then(resposta => {
+            setBody(resposta.data) 
+            redirecionar("/hoje")});
+
+        promisse.catch(resposta => {
+            alert("Email ou senha incorretos. Tente novamente");
+        })
     }
 
     return(
