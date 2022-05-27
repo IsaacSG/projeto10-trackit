@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import Footer from "./Footer";
 import Header from "./Header";
+//import axios from "axios";
 
 export default function Habitos (){
 
     function AdicionaHabito(){
-
     }
 
     return(

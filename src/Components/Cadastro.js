@@ -4,6 +4,7 @@ import axios from "axios";
 import { useState } from "react";
 import Logo from "../Styles/Image/Trackit.png";
 import { Link } from "react-router-dom";
+import { BaseAPI } from "../Dados Globais/Dados";
 
 
 export default function Cadastro (){
@@ -16,7 +17,7 @@ export default function Cadastro (){
     function Cadastrar (){
         
         const corpo = {email,password,name,image}
-        const enviar = axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v2/trackit/auth/sign-up", corpo);
+        const enviar = axios.post(`${BaseAPI}/auth/sign-up`, corpo);
         enviar.then(console.log(corpo));
     }
 
