@@ -13,7 +13,6 @@ export default function App (){
 
         <BrowserRouter>
             <Routes>
-                <Header />
                 <Route path = "/" element = {<Login />} />
                 <Route path = "/cadastro" element = {<Cadastro />} />
                 <Route path = "/habitos" element = {<Habitos />} />
