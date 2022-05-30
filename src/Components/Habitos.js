@@ -41,7 +41,6 @@ export default function Habits() {
 
     useEffect(() => {
         getHabits()
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [habits])
 
     function getHabits() {
@@ -103,7 +102,7 @@ export default function Habits() {
                     <input type="text" value={name} placeholder="nome do habito" disabled={loading} 
                         onChange={(e) => setName(e.target.value)} />
                     <div>
-                        {days.map((day, i) => <Dia key={i} name={day.name} daysNumbers={daysNumbers} days={days} isSelected={day.selected} setDays={setDays} setDaysNumbers={setDaysNumbers} index={i} loading={loading} />)}
+                        {days.map((day, i) => <DayCard key={i} name={day.name} daysNumbers={daysNumbers} days={days} isSelected={day.selected} setDays={setDays} setDaysNumbers={setDaysNumbers} index={i} loading={loading} />)}
                     </div>
                     <Botoes>
                         <button onClick={() => setCreating(false)} disabled={loading}>Cancelar</button>

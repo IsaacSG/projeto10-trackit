@@ -7,11 +7,11 @@ export const autorização = (user) => {return{headers: {
 
 
 export const DiasSemana = [
-    {id: 0, nome: "D", selecionado: false},
-    {id: 1, nome: "S", selecionado: false},
-    {id: 2, nome: "T", selecionado: false},
-    {id: 3, nome: "Q", selecionado: false},
-    {id: 4, nome: "Q", selecionado: false},
-    {id: 5, nome: "S", selecionado: false},
-    {id: 6, nome: "S", selecionado: false}
+    { id: 0, name: 'D', selected: false },
+    { id: 1, name: 'S', selected: false },
+    { id: 2, name: 'T', selected: false },
+    { id: 3, name: 'Q', selected: false },
+    { id: 4, name: 'Q', selected: false },
+    { id: 5, name: 'S', selected: false },
+    { id: 6, name: 'S', selected: false },
 ];
