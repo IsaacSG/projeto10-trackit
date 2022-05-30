@@ -10,14 +10,14 @@ import userContext from "../Contexto/UserContext";
 export default function Login (){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const {setBody} = useContext(userContext);
+    const {setUser} = useContext(userContext);
     const redirecionar = useNavigate();
 
     function Logar(){
         const corpo = {email, password};
         const promisse = axios.post(`${BaseAPI}/auth/login`, corpo);
         promisse.then(resposta => {
-            setBody({token:resposta.data.token, image:resposta.data.image, name:resposta.data.name})
+            setUser({token:resposta.data.token, image:resposta.data.image, name:resposta.data.name})
             redirecionar("/hoje")
         
         });

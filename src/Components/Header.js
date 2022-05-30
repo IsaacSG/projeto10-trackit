@@ -5,12 +5,12 @@ import { useContext } from "react";
 
 export default function Header (){
 
-    const {body} = useContext(userContext);
+    const {user} = useContext(userContext);
 
     return(
         <Head>
             <p>Trackit</p>
-            <img src = {body.image} alt = {body.name} />
+            <img src = {user.image} alt = {user.name} />
         </Head>
     );
 }

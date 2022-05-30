@@ -10,7 +10,7 @@ import ProgressoContext from "../Contexto/ProgressoContext";
 
 export default function Footer (){
     
-    const {body} = useContext(userContext);
+    const {user} = useContext(userContext);
     const {progesso, setProgresso} = useContext(ProgressoContext);
     const [habitos, setHabitos] = useState([]);
 
@@ -29,7 +29,7 @@ export default function Footer (){
     };
 
     function pegarHabitos(){
-        const promisse = axios.get(`${BaseAPI}/habits/today`, autorização(body))
+        const promisse = axios.get(`${BaseAPI}/habits/today`, autorização(user))
         promisse.then(resposta => setHabitos(resposta.data))
     };
 
